@@ -1,0 +1,517 @@
+
+xmega16e5-xcl-ws2812-test.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000002e4  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00802000  00802000  00000358  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000097  00802000  00802000  00000358  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000358  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000388  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000068  00000000  00000000  000003c8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00002edb  00000000  00000000  00000430  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00001d9f  00000000  00000000  0000330b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000611  00000000  00000000  000050aa  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000098  00000000  00000000  000056bc  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00002cb4  00000000  00000000  00005754  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    000000b9  00000000  00000000  00008408  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000048  00000000  00000000  000084c1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 56 00 	jmp	0xac	; 0xac <__ctors_end>
+   4:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+   8:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+   c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  10:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  14:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  18:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  1c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  20:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  24:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  28:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  2c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  30:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  34:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  38:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  3c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  40:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  44:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  48:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  4c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  50:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  54:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  58:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  5c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  60:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  64:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  68:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  6c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  70:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  74:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  78:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  7c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  80:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  84:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  88:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  8c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  90:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  94:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  98:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  9c:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  a0:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  a4:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+  a8:	0c 94 68 00 	jmp	0xd0	; 0xd0 <__bad_interrupt>
+
+000000ac <__ctors_end>:
+  ac:	11 24       	eor	r1, r1
+  ae:	1f be       	out	0x3f, r1	; 63
+  b0:	cf ef       	ldi	r28, 0xFF	; 255
+  b2:	cd bf       	out	0x3d, r28	; 61
+  b4:	d7 e2       	ldi	r29, 0x27	; 39
+  b6:	de bf       	out	0x3e, r29	; 62
+
+000000b8 <__do_clear_bss>:
+  b8:	20 e2       	ldi	r18, 0x20	; 32
+  ba:	a0 e0       	ldi	r26, 0x00	; 0
+  bc:	b0 e2       	ldi	r27, 0x20	; 32
+  be:	01 c0       	rjmp	.+2      	; 0xc2 <.do_clear_bss_start>
+
+000000c0 <.do_clear_bss_loop>:
+  c0:	1d 92       	st	X+, r1
+
+000000c2 <.do_clear_bss_start>:
+  c2:	a7 39       	cpi	r26, 0x97	; 151
+  c4:	b2 07       	cpc	r27, r18
+  c6:	e1 f7       	brne	.-8      	; 0xc0 <.do_clear_bss_loop>
+  c8:	0e 94 ca 00 	call	0x194	; 0x194 <main>
+  cc:	0c 94 70 01 	jmp	0x2e0	; 0x2e0 <_exit>
+
+000000d0 <__bad_interrupt>:
+  d0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000d4 <clk_init>:
+
+ws2812drv_led_t leds[50];
+
+void clk_init()
+{
+	CCP = CCP_IOREG_gc;
+  d4:	88 ed       	ldi	r24, 0xD8	; 216
+  d6:	84 bf       	out	0x34, r24	; 52
+	OSC_CTRL = OSC_RC32MEN_bm;
+  d8:	82 e0       	ldi	r24, 0x02	; 2
+  da:	80 93 50 00 	sts	0x0050, r24	; 0x800050 <__TEXT_REGION_LENGTH__+0x7fb050>
+	
+	while(!(OSC_STATUS & OSC_RC32MRDY_bm)){};
+  de:	80 91 51 00 	lds	r24, 0x0051	; 0x800051 <__TEXT_REGION_LENGTH__+0x7fb051>
+  e2:	81 ff       	sbrs	r24, 1
+  e4:	fc cf       	rjmp	.-8      	; 0xde <clk_init+0xa>
+	
+	CCP = CCP_IOREG_gc;
+  e6:	88 ed       	ldi	r24, 0xD8	; 216
+  e8:	84 bf       	out	0x34, r24	; 52
+	CLK_CTRL = CLK_SCLKSEL_RC32M_gc;
+  ea:	91 e0       	ldi	r25, 0x01	; 1
+  ec:	90 93 40 00 	sts	0x0040, r25	; 0x800040 <__TEXT_REGION_LENGTH__+0x7fb040>
+	
+	CCP = CCP_IOREG_gc;
+  f0:	84 bf       	out	0x34, r24	; 52
+	CLK_PSCTRL = 0;
+  f2:	10 92 41 00 	sts	0x0041, r1	; 0x800041 <__TEXT_REGION_LENGTH__+0x7fb041>
+  f6:	08 95       	ret
+
+000000f8 <interrupt_init>:
+	
+}
+
+void interrupt_init()
+{
+	PMIC_CTRL = PMIC_HILVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_LOLVLEN_bm;
+  f8:	87 e0       	ldi	r24, 0x07	; 7
+  fa:	80 93 a2 00 	sts	0x00A2, r24	; 0x8000a2 <__TEXT_REGION_LENGTH__+0x7fb0a2>
+  fe:	08 95       	ret
+
+00000100 <load_leds>:
+
+uint8_t offset = 0;
+
+void load_leds()
+{
+	for (uint8_t i = 0; i < 50; i++)
+ 100:	40 e0       	ldi	r20, 0x00	; 0
+ 102:	3f c0       	rjmp	.+126    	; 0x182 <load_leds+0x82>
+	{
+		leds[i].r = 0;
+ 104:	24 2f       	mov	r18, r20
+ 106:	30 e0       	ldi	r19, 0x00	; 0
+ 108:	f9 01       	movw	r30, r18
+ 10a:	ee 0f       	add	r30, r30
+ 10c:	ff 1f       	adc	r31, r31
+ 10e:	e2 0f       	add	r30, r18
+ 110:	f3 1f       	adc	r31, r19
+ 112:	ef 5f       	subi	r30, 0xFF	; 255
+ 114:	ff 4d       	sbci	r31, 0xDF	; 223
+ 116:	11 82       	std	Z+1, r1	; 0x01
+		leds[i].g = 0;
+ 118:	10 82       	st	Z, r1
+		leds[i].b = 0;
+ 11a:	12 82       	std	Z+2, r1	; 0x02
+		
+		switch((i + offset)%3)
+ 11c:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <_edata>
+ 120:	b9 01       	movw	r22, r18
+ 122:	68 0f       	add	r22, r24
+ 124:	71 1d       	adc	r23, r1
+ 126:	cb 01       	movw	r24, r22
+ 128:	63 e0       	ldi	r22, 0x03	; 3
+ 12a:	70 e0       	ldi	r23, 0x00	; 0
+ 12c:	0e 94 48 01 	call	0x290	; 0x290 <__divmodhi4>
+ 130:	81 30       	cpi	r24, 0x01	; 1
+ 132:	91 05       	cpc	r25, r1
+ 134:	81 f0       	breq	.+32     	; 0x156 <load_leds+0x56>
+ 136:	82 30       	cpi	r24, 0x02	; 2
+ 138:	91 05       	cpc	r25, r1
+ 13a:	c1 f0       	breq	.+48     	; 0x16c <load_leds+0x6c>
+ 13c:	89 2b       	or	r24, r25
+ 13e:	01 f5       	brne	.+64     	; 0x180 <load_leds+0x80>
+		{
+			case 0:
+				leds[i].r = 64;
+ 140:	f9 01       	movw	r30, r18
+ 142:	ee 0f       	add	r30, r30
+ 144:	ff 1f       	adc	r31, r31
+ 146:	2e 0f       	add	r18, r30
+ 148:	3f 1f       	adc	r19, r31
+ 14a:	f9 01       	movw	r30, r18
+ 14c:	ef 5f       	subi	r30, 0xFF	; 255
+ 14e:	ff 4d       	sbci	r31, 0xDF	; 223
+ 150:	80 e4       	ldi	r24, 0x40	; 64
+ 152:	81 83       	std	Z+1, r24	; 0x01
+				break;
+ 154:	15 c0       	rjmp	.+42     	; 0x180 <load_leds+0x80>
+			case 1:
+				leds[i].g = 64;
+ 156:	f9 01       	movw	r30, r18
+ 158:	ee 0f       	add	r30, r30
+ 15a:	ff 1f       	adc	r31, r31
+ 15c:	2e 0f       	add	r18, r30
+ 15e:	3f 1f       	adc	r19, r31
+ 160:	f9 01       	movw	r30, r18
+ 162:	ef 5f       	subi	r30, 0xFF	; 255
+ 164:	ff 4d       	sbci	r31, 0xDF	; 223
+ 166:	80 e4       	ldi	r24, 0x40	; 64
+ 168:	80 83       	st	Z, r24
+				break;
+ 16a:	0a c0       	rjmp	.+20     	; 0x180 <load_leds+0x80>
+			case 2:
+				leds[i].b = 64;
+ 16c:	f9 01       	movw	r30, r18
+ 16e:	ee 0f       	add	r30, r30
+ 170:	ff 1f       	adc	r31, r31
+ 172:	2e 0f       	add	r18, r30
+ 174:	3f 1f       	adc	r19, r31
+ 176:	f9 01       	movw	r30, r18
+ 178:	ef 5f       	subi	r30, 0xFF	; 255
+ 17a:	ff 4d       	sbci	r31, 0xDF	; 223
+ 17c:	80 e4       	ldi	r24, 0x40	; 64
+ 17e:	82 83       	std	Z+2, r24	; 0x02
+
+uint8_t offset = 0;
+
+void load_leds()
+{
+	for (uint8_t i = 0; i < 50; i++)
+ 180:	4f 5f       	subi	r20, 0xFF	; 255
+ 182:	42 33       	cpi	r20, 0x32	; 50
+ 184:	08 f4       	brcc	.+2      	; 0x188 <load_leds+0x88>
+ 186:	be cf       	rjmp	.-132    	; 0x104 <load_leds+0x4>
+			case 2:
+				leds[i].b = 64;
+				break;
+		}
+	}
+	offset++;
+ 188:	80 91 00 20 	lds	r24, 0x2000	; 0x802000 <_edata>
+ 18c:	8f 5f       	subi	r24, 0xFF	; 255
+ 18e:	80 93 00 20 	sts	0x2000, r24	; 0x802000 <_edata>
+ 192:	08 95       	ret
+
+00000194 <main>:
+}
+
+int main(void)
+{
+	cli();
+ 194:	f8 94       	cli
+	clk_init();
+ 196:	0e 94 6a 00 	call	0xd4	; 0xd4 <clk_init>
+	interrupt_init();
+ 19a:	0e 94 7c 00 	call	0xf8	; 0xf8 <interrupt_init>
+	sei();
+ 19e:	78 94       	sei
+	ws2812drv_init();
+ 1a0:	0e 94 ea 00 	call	0x1d4	; 0x1d4 <ws2812drv_init>
+	PORTA.DIRSET = PIN3_bm;
+ 1a4:	88 e0       	ldi	r24, 0x08	; 8
+ 1a6:	80 93 01 06 	sts	0x0601, r24	; 0x800601 <__TEXT_REGION_LENGTH__+0x7fb601>
+    /* Replace with your application code */
+    while (1) 
+    {
+		PORTA.OUTTGL = PIN3_bm;
+ 1aa:	88 e0       	ldi	r24, 0x08	; 8
+ 1ac:	80 93 07 06 	sts	0x0607, r24	; 0x800607 <__TEXT_REGION_LENGTH__+0x7fb607>
+		load_leds();
+ 1b0:	0e 94 80 00 	call	0x100	; 0x100 <load_leds>
+		ws2812drv_start_transfer(leds, 50);
+ 1b4:	62 e3       	ldi	r22, 0x32	; 50
+ 1b6:	70 e0       	ldi	r23, 0x00	; 0
+ 1b8:	81 e0       	ldi	r24, 0x01	; 1
+ 1ba:	90 e2       	ldi	r25, 0x20	; 32
+ 1bc:	0e 94 3a 01 	call	0x274	; 0x274 <ws2812drv_start_transfer>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 1c0:	2f ef       	ldi	r18, 0xFF	; 255
+ 1c2:	83 ec       	ldi	r24, 0xC3	; 195
+ 1c4:	99 e0       	ldi	r25, 0x09	; 9
+ 1c6:	21 50       	subi	r18, 0x01	; 1
+ 1c8:	80 40       	sbci	r24, 0x00	; 0
+ 1ca:	90 40       	sbci	r25, 0x00	; 0
+ 1cc:	e1 f7       	brne	.-8      	; 0x1c6 <main+0x32>
+ 1ce:	00 c0       	rjmp	.+0      	; 0x1d0 <main+0x3c>
+ 1d0:	00 00       	nop
+ 1d2:	eb cf       	rjmp	.-42     	; 0x1aa <main+0x16>
+
+000001d4 <ws2812drv_init>:
+
+
+void ws2812drv_init(void)
+{                                                               
+    // Setup EDMA channel 2(+1)  0(+1)
+    EDMA.CTRL = EDMA_ENABLE_bm | EDMA_CHMODE_STD02_gc | EDMA_DBUFMODE_DISABLE_gc | EDMA_PRIMODE_CH0123_gc;
+ 1d4:	a0 e0       	ldi	r26, 0x00	; 0
+ 1d6:	b1 e0       	ldi	r27, 0x01	; 1
+ 1d8:	83 eb       	ldi	r24, 0xB3	; 179
+ 1da:	8c 93       	st	X, r24
+    EDMA.CH2.CTRLB = 0;// EDMA_CH_INTLVL_OFF_gc;
+ 1dc:	d1 96       	adiw	r26, 0x31	; 49
+ 1de:	1c 92       	st	X, r1
+ 1e0:	d1 97       	sbiw	r26, 0x31	; 49
+    EDMA.CH2.ADDRCTRL = EDMA_CH_RELOAD_NONE_gc | EDMA_CH_DIR_INC_gc;
+ 1e2:	81 e0       	ldi	r24, 0x01	; 1
+ 1e4:	d2 96       	adiw	r26, 0x32	; 50
+ 1e6:	8c 93       	st	X, r24
+ 1e8:	d2 97       	sbiw	r26, 0x32	; 50
+    EDMA.CH2.DESTADDRCTRL = EDMA_CH_RELOAD_NONE_gc | EDMA_CH_DESTDIR_FIXED_gc;
+ 1ea:	d3 96       	adiw	r26, 0x33	; 51
+ 1ec:	1c 92       	st	X, r1
+ 1ee:	d3 97       	sbiw	r26, 0x33	; 51
+    EDMA.CH2.DESTADDR = (uint16_t)&USARTD0.DATA;
+ 1f0:	e0 ec       	ldi	r30, 0xC0	; 192
+ 1f2:	f9 e0       	ldi	r31, 0x09	; 9
+ 1f4:	dc 96       	adiw	r26, 0x3c	; 60
+ 1f6:	ed 93       	st	X+, r30
+ 1f8:	fc 93       	st	X, r31
+ 1fa:	dd 97       	sbiw	r26, 0x3d	; 61
+    EDMA.CH2.TRIGSRC = EDMA_CH_TRIGSRC_USARTD0_DRE_gc;
+ 1fc:	9d e6       	ldi	r25, 0x6D	; 109
+ 1fe:	d4 96       	adiw	r26, 0x34	; 52
+ 200:	9c 93       	st	X, r25
+//     EDMA.CH0.DESTADDR = (uint16_t)&USARTC0.DATA;
+//     EDMA.CH0.TRIGSRC = EDMA_CH_TRIGSRC_USARTC0_DRE_gc;
+    // Setup port pins for TxD, XCK and LUT0OUT
+    PORTD.PIN0CTRL = PORT_OPC_TOTEM_gc;                         // LUT0OUT (data to WS2812)
+ 202:	a0 e6       	ldi	r26, 0x60	; 96
+ 204:	b6 e0       	ldi	r27, 0x06	; 6
+ 206:	50 96       	adiw	r26, 0x10	; 16
+ 208:	1c 92       	st	X, r1
+ 20a:	50 97       	sbiw	r26, 0x10	; 16
+    PORTD.PIN1CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_RISING_gc;    // XCK
+ 20c:	51 96       	adiw	r26, 0x11	; 17
+ 20e:	8c 93       	st	X, r24
+ 210:	51 97       	sbiw	r26, 0x11	; 17
+    PORTD.PIN3CTRL = PORT_OPC_TOTEM_gc | PORT_ISC_LEVEL_gc;     // TxD
+ 212:	83 e0       	ldi	r24, 0x03	; 3
+ 214:	53 96       	adiw	r26, 0x13	; 19
+ 216:	8c 93       	st	X, r24
+ 218:	53 97       	sbiw	r26, 0x13	; 19
+    PORTD.DIRSET = PIN0_bm | PIN1_bm | PIN3_bm;
+ 21a:	9b e0       	ldi	r25, 0x0B	; 11
+ 21c:	11 96       	adiw	r26, 0x01	; 1
+ 21e:	9c 93       	st	X, r25
+	
+
+    // Setup Event channel 0 to TxD (async)
+    EVSYS.CH0MUX = EVSYS_CHMUX_PORTD_PIN3_gc;
+ 220:	a0 e8       	ldi	r26, 0x80	; 128
+ 222:	b1 e0       	ldi	r27, 0x01	; 1
+ 224:	9b e6       	ldi	r25, 0x6B	; 107
+ 226:	9c 93       	st	X, r25
+    EVSYS.CH0CTRL = EVSYS_DIGFILT_1SAMPLE_gc;
+ 228:	18 96       	adiw	r26, 0x08	; 8
+ 22a:	1c 92       	st	X, r1
+ 22c:	18 97       	sbiw	r26, 0x08	; 8
+    // Setup Event channel 6 to XCK rising edge
+    EVSYS.CH6MUX = EVSYS_CHMUX_PORTD_PIN1_gc;
+ 22e:	99 e6       	ldi	r25, 0x69	; 105
+ 230:	16 96       	adiw	r26, 0x06	; 6
+ 232:	9c 93       	st	X, r25
+ 234:	16 97       	sbiw	r26, 0x06	; 6
+    EVSYS.CH6CTRL = EVSYS_DIGFILT_1SAMPLE_gc;
+ 236:	1e 96       	adiw	r26, 0x0e	; 14
+ 238:	1c 92       	st	X, r1
+//     USARTC0.CTRLC = USART_CMODE_MSPI_gc | (1 << 1);             // UDORD=0 UCPHA=1
+//     USARTC0.CTRLD = USART_DECTYPE_DATA_gc | USART_LUTACT_OFF_gc | USART_PECACT_OFF_gc;
+//     USARTC0.CTRLB = USART_TXEN_bm;
+
+    // Setup USART in master SPI mode 1, MSB first
+    USARTD0.BAUDCTRLA = 19;                                     // 800.000 baud (1250 ns @ 32 MHz)
+ 23a:	93 e1       	ldi	r25, 0x13	; 19
+ 23c:	96 83       	std	Z+6, r25	; 0x06
+    USARTD0.BAUDCTRLB = 0;
+ 23e:	17 82       	std	Z+7, r1	; 0x07
+    USARTD0.CTRLA = 0;// USART_RXSINTLVL_OFF_gc | USART_RXCINTLVL_OFF_gc | USART_TXCINTLVL_OFF_gc;
+ 240:	12 82       	std	Z+2, r1	; 0x02
+    USARTD0.CTRLC = USART_CMODE_MSPI_gc | (1 << 1);             // UDORD=0 UCPHA=1
+ 242:	92 ec       	ldi	r25, 0xC2	; 194
+ 244:	94 83       	std	Z+4, r25	; 0x04
+    USARTD0.CTRLD = USART_DECTYPE_DATA_gc | USART_LUTACT_OFF_gc | USART_PECACT_OFF_gc;
+ 246:	15 82       	std	Z+5, r1	; 0x05
+    USARTD0.CTRLB = USART_TXEN_bm;
+ 248:	98 e0       	ldi	r25, 0x08	; 8
+ 24a:	93 83       	std	Z+3, r25	; 0x03
+
+    // Setup XCL BTC0 timer to 1shot pwm generation
+    XCL.CTRLE = XCL_CMDSEL_NONE_gc | XCL_TCSEL_BTC0_gc | XCL_CLKSEL_DIV1_gc;
+ 24c:	e0 e6       	ldi	r30, 0x60	; 96
+ 24e:	f4 e0       	ldi	r31, 0x04	; 4
+ 250:	91 e1       	ldi	r25, 0x11	; 17
+ 252:	94 83       	std	Z+4, r25	; 0x04
+    XCL.CTRLF = XCL_CMDEN_DISABLE_gc | 0x03;                    // 0x03 : One-shot PWM (missing in iox32e5.h)
+ 254:	85 83       	std	Z+5, r24	; 0x05
+    XCL.CTRLG = XCL_EVACTEN_bm | (0x03<<3) | XCL_EVSRC_EVCH6_gc; // 0x03<<3 : EVACT0=RESTART (missing in iox32e5.h)
+ 256:	8e e9       	ldi	r24, 0x9E	; 158
+ 258:	86 83       	std	Z+6, r24	; 0x06
+    XCL.PERCAPTL = 22;                                          // Output high time if data is 1 (from RESTART to falling edge of one-shot)
+ 25a:	86 e1       	ldi	r24, 0x16	; 22
+ 25c:	86 87       	std	Z+14, r24	; 0x0e
+    XCL.CMPL = 13;                                              // Output high time if data is 0 (from RESTART to rising edge of one-shot)
+ 25e:	8d e0       	ldi	r24, 0x0D	; 13
+ 260:	84 87       	std	Z+12, r24	; 0x0c
+
+    // Setup XCL LUT
+    XCL.CTRLA = XCL_LUT0OUTEN_PIN0_gc | XCL_PORTSEL_PD_gc | XCL_LUTCONF_MUX_gc;  // Setup glue logic for MUX
+ 262:	84 e5       	ldi	r24, 0x54	; 84
+ 264:	80 83       	st	Z, r24
+// 	XCL.CTRLA = XCL_LUTOUTEN_PIN0_gc | XCL_PORTSEL_PC_gc | XCL_LUTCONF_MUX_gc;  // Setup glue logic for MUX
+    XCL.CTRLB = 0x50;                                           // IN3SEL=XCL, IN2SEL=XCL, IN1SEL=EVSYS, IN0SEL=EVSYS (missing in iox32e5.h)
+ 266:	80 e5       	ldi	r24, 0x50	; 80
+ 268:	81 83       	std	Z+1, r24	; 0x01
+    XCL.CTRLC = XCL_EVASYSEL0_bm | XCL_DLYCONF_DISABLE_gc;      // Async inputs, no delay
+ 26a:	80 e4       	ldi	r24, 0x40	; 64
+ 26c:	82 83       	std	Z+2, r24	; 0x02
+    XCL.CTRLD = 0xA0;                                           // LUT truthtables (only LUT1 is used)
+ 26e:	80 ea       	ldi	r24, 0xA0	; 160
+ 270:	83 83       	std	Z+3, r24	; 0x03
+ 272:	08 95       	ret
+
+00000274 <ws2812drv_start_transfer>:
+}
+
+
+void ws2812drv_start_transfer(ws2812drv_led_t *p, uint16_t cnt)
+{
+    EDMA.CH2.ADDR = (uint16_t)p;
+ 274:	e0 e0       	ldi	r30, 0x00	; 0
+ 276:	f1 e0       	ldi	r31, 0x01	; 1
+ 278:	80 af       	std	Z+56, r24	; 0x38
+ 27a:	91 af       	std	Z+57, r25	; 0x39
+    EDMA.CH2.TRFCNT = cnt * sizeof(ws2812drv_led_t);
+ 27c:	cb 01       	movw	r24, r22
+ 27e:	88 0f       	add	r24, r24
+ 280:	99 1f       	adc	r25, r25
+ 282:	68 0f       	add	r22, r24
+ 284:	79 1f       	adc	r23, r25
+ 286:	66 ab       	std	Z+54, r22	; 0x36
+ 288:	77 ab       	std	Z+55, r23	; 0x37
+    EDMA.CH2.CTRLA = EDMA_CH_ENABLE_bm | EDMA_CH_SINGLE_bm; // Start DMA transfer to LEDs
+ 28a:	84 e8       	ldi	r24, 0x84	; 132
+ 28c:	80 ab       	std	Z+48, r24	; 0x30
+ 28e:	08 95       	ret
+
+00000290 <__divmodhi4>:
+ 290:	97 fb       	bst	r25, 7
+ 292:	07 2e       	mov	r0, r23
+ 294:	16 f4       	brtc	.+4      	; 0x29a <__divmodhi4+0xa>
+ 296:	00 94       	com	r0
+ 298:	07 d0       	rcall	.+14     	; 0x2a8 <__divmodhi4_neg1>
+ 29a:	77 fd       	sbrc	r23, 7
+ 29c:	09 d0       	rcall	.+18     	; 0x2b0 <__divmodhi4_neg2>
+ 29e:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <__udivmodhi4>
+ 2a2:	07 fc       	sbrc	r0, 7
+ 2a4:	05 d0       	rcall	.+10     	; 0x2b0 <__divmodhi4_neg2>
+ 2a6:	3e f4       	brtc	.+14     	; 0x2b6 <__divmodhi4_exit>
+
+000002a8 <__divmodhi4_neg1>:
+ 2a8:	90 95       	com	r25
+ 2aa:	81 95       	neg	r24
+ 2ac:	9f 4f       	sbci	r25, 0xFF	; 255
+ 2ae:	08 95       	ret
+
+000002b0 <__divmodhi4_neg2>:
+ 2b0:	70 95       	com	r23
+ 2b2:	61 95       	neg	r22
+ 2b4:	7f 4f       	sbci	r23, 0xFF	; 255
+
+000002b6 <__divmodhi4_exit>:
+ 2b6:	08 95       	ret
+
+000002b8 <__udivmodhi4>:
+ 2b8:	aa 1b       	sub	r26, r26
+ 2ba:	bb 1b       	sub	r27, r27
+ 2bc:	51 e1       	ldi	r21, 0x11	; 17
+ 2be:	07 c0       	rjmp	.+14     	; 0x2ce <__udivmodhi4_ep>
+
+000002c0 <__udivmodhi4_loop>:
+ 2c0:	aa 1f       	adc	r26, r26
+ 2c2:	bb 1f       	adc	r27, r27
+ 2c4:	a6 17       	cp	r26, r22
+ 2c6:	b7 07       	cpc	r27, r23
+ 2c8:	10 f0       	brcs	.+4      	; 0x2ce <__udivmodhi4_ep>
+ 2ca:	a6 1b       	sub	r26, r22
+ 2cc:	b7 0b       	sbc	r27, r23
+
+000002ce <__udivmodhi4_ep>:
+ 2ce:	88 1f       	adc	r24, r24
+ 2d0:	99 1f       	adc	r25, r25
+ 2d2:	5a 95       	dec	r21
+ 2d4:	a9 f7       	brne	.-22     	; 0x2c0 <__udivmodhi4_loop>
+ 2d6:	80 95       	com	r24
+ 2d8:	90 95       	com	r25
+ 2da:	bc 01       	movw	r22, r24
+ 2dc:	cd 01       	movw	r24, r26
+ 2de:	08 95       	ret
+
+000002e0 <_exit>:
+ 2e0:	f8 94       	cli
+
+000002e2 <__stop_program>:
+ 2e2:	ff cf       	rjmp	.-2      	; 0x2e2 <__stop_program>
